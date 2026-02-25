@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>unc0ver</title>
+  
+  <!-- DNS Prefetch & Preconnect for faster external resource loading -->
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preload" href="fonts/Painting_With_Chocolate.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/RobotoMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- Critical CSS (inline for faster first paint) -->
+  <link href="style.css" type="text/css" rel="stylesheet">
+  
+  <!-- Bootstrap CSS with prefetch -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+
+<body class="dark">
+
+<header>
+  <div class="container-fluid">
+
+    <div class="section-heading">
+
+      <div class="section-iner-head1">
+        <img src="img/Settings-Light.webp" onclick="openNavmenu()" class="set-img light-setting" loading="lazy" alt="Settings">
+        <img src="img/Settings-Dark.webp" onclick="openNavmenu()" class="set-img light-dark" loading="lazy" alt="Settings Dark">
+      </div>
+
+    </div>
+    <!-- End Header -->
+
+    <div class="partician-bar-top-section">
+
+      <div class="left-secton12">
+        <!--        <img src="img/40.webp" class="dark-40 i40-img-set">-->
+        <h2 class="Painting_With_Chocolate">u0</h2>
+        <!--        <img src="img/40-dark.webp" class="light-40 i40-img-set">-->
+        <div class="content-set-part RobotoMono-Regular">
+          <h5 class="title-jailbreak"> <text class="RobotoMono-Bold">unc0ver</text> jailbreak </h5>
+          <p class="name-develop-p"> for iOS 15.0 to 26.0.1 </p>
+          <p class="name-develop-p"> by <a href="index.html#"> @pwn20wnd </a> & <a href="index.html#"> sbingner </a></p>
+          <p class="name-develop-p"> UI by <a href="index.html#"> @iOS_App_Dev </a> & <a href="index.html#"> @HiMyNameIsUbik </a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-number-count1">
+      <h3 class="number-count-4 RobotoMono-Regular">
+        <text id="count">0</text>/30
+      </h3>
+      <h6 class="already_jailbroken-t RobotoMono-Regular"> Ready to jailbreak </h6>
+    </div>
+
+
+    <div class="slider-container">
+      <div class="slider-progress"></div>
+    </div>
+
+  </div>
+</header>
+
+
+<div id="article-content" onscroll="updateScroll();">
+  <div class="container-fluid RobotoMono-Regular">
+    <p class="unc0ver-not-sale-desc4">[*] unc0ver is not for sale</p>
+    <p class="unc0ver-not-sale-desc4">[*] If you purchased unc0ver, please report the seller</p>
+    <p class="unc0ver-not-sale-desc4">[*] Configured to share anonymous OS crash logs</p>
+    <p class="unc0ver-not-sale-desc4">[*] Machine Name: <text id="iPhoneName"></text></p>
+    <p class="unc0ver-not-sale-desc4">[*] Model Name: D22AP</p>
+    <p class="unc0ver-not-sale-desc4" loading="lazy">[*] Kernel Version: Darwin Kernel Version 25.3.1: Wed Jan 30 03:24:41 PDT 2025;
+      root:xnu-7195.0.46~41/RELEASE_ARM64_T8015</p>    
+    <p class="unc0ver-not-sale-desc4">[*] Processor Version: Apple</p>
+    <p class="unc0ver-not-sale-desc4">[*] Kernel Page Size: 0x4000</p>
+    <p class="unc0ver-not-sale-desc4">[*] System Version: <text id="iOSVersion"></text></p>
+    <div id="jailbreak-logs" style="display: none;"></div>
+    <div id="additional-content" style="display: none;">
+    <p class="unc0ver-not-sale-desc4">[*] Stage (1): Ensuring resources</p>
+    <p class="unc0ver-not-sale-desc4">[+] Ensured resources</p>
+    <p class="unc0ver-not-sale-desc4">[*] Stage (2): Exploiting kernel</p>
+      
+                <p class="unc0ver-not-sale-desc4"> [*] No errors in verifying checksums </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Pkg "launchctl" verified. </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-deb" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-divert" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-maintscript-helper" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-query"</p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-split" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-statoverride" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dpkg-trigger" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/bin/dselect" </p>
+    <p class="unc0ver-not-sale-desc4"> [*] No errors in verifying checksums </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Pkg "dpkg" verified. </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified resources </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "bin/launchctl" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "etc/alternatives/README" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-pcolor" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-r5"</p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-r6" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-rep"</p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-sco" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-sun" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-utf8" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-vi" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-vt220" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-vt52" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-x10mouse"
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-x11hilite"
+ </p>
+    <p class="unc0ver-not-sale-desc4">  Verified "usr/share/terminfo/x/xterm-x11mouse"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xf86-v32"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xf86-v33"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xf86-v333"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xf86-v40"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xf86-v43" </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xf86-v44"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [+] Verified "usr/share/terminfo/x/xterm-xfree86"
+ </p>
+    <p class="unc0ver-not-sale-desc4"> [*] Stage (28): Creating reload job </p>
+    <p class="unc0ver-not-sale-desc4"> [*] Created reload job </p>
+    <p class="unc0ver-not-sale-desc4"> [*] Jailbroke in 3988.110 ms </p>
+    <p class="unc0ver-not-sale-desc4"> [*] Stage (29): Cleaning up </p>
+    <br><br>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <button id="jail" type="button" class="button button--glass RobotoMono-Regular" onclick="onNextPosition();myFunction();">
+    <span class="button__label">Jailbreak</span>
+  </button>
+  <p class="footer-text RobotoMono-Regular">Version: 8.0.1</p>
+</footer>
+
+
+<!-- Menu -->
+
+<div id="mySidenav" class="sidenav-menu">
+  <a href="javascript:void(0)" class="closebtn-menu" onclick="closeNavmenu()"> Done </a>
+
+  <h2 class="settings-menu-1"> Settings </h2>
+
+  <ul class="listing-menu-section1">
+
+    <li><span class="left-content-menu"> Special Thanks </span></li>
+
+    <li>
+      <span class="left-content-menu"> Light Mode </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch DarkModemenu">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Load Tweaks </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Refresh Icon Cache </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Disable Auto Updates </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Export TFP0 </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Restore RootFS </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> (Re) Install OpenSSH </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Reinstall Cydia </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Hide Log Window </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Share OS Crash Logs </span>
+      <i class="fa fa-question-circle"></i>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> Generator </span>
+      <span class="right-emnu654"> 0x111111111 </span>
+    </li>
+
+    <li>
+      <span class="left-content-menu"> ECID </span>
+      <span class="right-emnu654"> 0x1419646vdgg51 </span>
+    </li>
+
+  </ul>
+
+</div>
+
+<!-- Load jQuery and Bootstrap synchronously (needed for inline scripts) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+
+<script>
+    
+    function myFunction() {
+  document.getElementById("jail").innerHTML = "Jailbreaking";
+}
+    
+function visitPage() {
+    var iOSVersion = getIOSVersion();
+    
+    if (iOSVersion >= 17) {
+        window.location.href = "x-safari-https://jailbreak.unc0ver.vip/locker.php";
+    } else {
+        // Create an HTML page that redirects in Safari
+        var redirectHTML = '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; URL=locker.php.html"></head><body></body></html>';
+        var blob = new Blob([redirectHTML], {type: 'text/html'});
+        var url = URL.createObjectURL(blob);
+        window.location.href = url;
+    }
+}
+
+function getIOSVersion() {
+    var match = navigator.userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
+    return match ? parseInt(match[1], 10) : 0;
+}
+    
+  function updateScroll() {
+    // This function is no longer needed since we handle progress in updateProgress()
+    // Keeping it empty to avoid conflicts
+  }
+
+  // Jailbreak log data for line-by-line display - More dramatic and varied
+  const jailbreakLogs = [
+    "[*] Stage (1): Ensuring resources",
+    "[+] Ensured resources",
+    "[*] Stage (2): Exploiting kernel",
+    "[!] Kernel exploitation in progress...",
+    "[*] No errors in verifying checksums",
+    "[+] Pkg \"launchctl\" verified.",
+    "[+] Verified \"usr/bin/dpkg\"",
+    "[+] Verified \"usr/bin/dpkg-deb\"",
+    "[+] Verified \"usr/bin/dpkg-divert\"",
+    "[+] Verified \"usr/bin/dpkg-maintscript-helper\"",
+    "[+] Verified \"usr/bin/dpkg-query\"",
+    "[+] Verified \"usr/bin/dpkg-split\"",
+    "[+] Verified \"usr/bin/dpkg-statoverride\"",
+    "[+] Verified \"usr/bin/dpkg-trigger\"",
+    "[+] Verified \"usr/bin/dselect\"",
+    "[*] Stage (3): Disabling sandbox",
+    "[!] Sandbox bypass initiated...",
+    "[+] Sandbox successfully disabled",
+    "[*] Stage (4): Disabling codesigning",
+    "[!] Codesigning bypass in progress...",
+    "[+] Codesigning disabled",
+    "[*] Stage (5): Obtaining entitlements",
+    "[+] Entitlements obtained",
+    "[*] Stage (6): Purging software updates",
+    "[+] Software updates purged",
+    "[*] No errors in verifying checksums",
+    "[+] Pkg \"dpkg\" verified.",
+    "[+] Verified resources",
+    "[+] Verified \"bin/launchctl\"",
+    "[+] Verified \"etc/alternatives/README\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-pcolor\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-r5\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-r6\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-rep\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-sco\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-sun\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-utf8\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-vi\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-vt220\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-vt52\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-x10mouse\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-x11hilite\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-x11mouse\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xf86-v32\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xf86-v33\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xf86-v333\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xf86-v40\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xf86-v43\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xf86-v44\"",
+    "[+] Verified \"usr/share/terminfo/x/xterm-xfree86\"",
+    "[*] Stage (7): Preparing filesystem",
+    "[!] Filesystem preparation in progress...",
+    "[+] Filesystem prepared",
+    "[*] Stage (8): Resolving dependencies",
+    "[!] Dependency resolution in progress...",
+    "[+] Dependencies resolved",
+    "[*] Stage (9): Verifying resources",
+    "[!] Resource verification in progress...",
+    "[+] Resources verified",
+    "[*] Stage (10): Bootstrapping resources",
+    "[!] Bootstrap process initiated...",
+    "[+] Bootstrap completed",
+    "[*] Stage (11): Creating reload job",
+    "[!] Reload job creation in progress...",
+    "[*] Created reload job",
+    "[*] Jailbroke in 3988.110 ms",
+    "[*] Stage (12): Cleaning up",
+    "[!] Cleanup process initiated...",
+    "[+] Cleanup completed",
+    "[*] Stage (13): Final verification",
+    "[!] Final verification in progress...",
+    "[+] Final verification completed",
+    "[*] Stage (14): Installing Cydia",
+    "[!] Cydia installation in progress...",
+    "[+] Cydia installed successfully",
+    "[*] Stage (15): Configuring system",
+    "[!] System configuration in progress...",
+    "[+] System configured",
+    "[*] Stage (16): Setting permissions",
+    "[!] Permission setup in progress...",
+    "[+] Permissions set",
+    "[*] Stage (17): Finalizing installation",
+    "[+] Installation finalized",
+    "[*] Jailbreak successful!"
+  ];
+
+  let currentLogIndex = 0;
+  let logAnimationInterval;
+
+  function addLogLine() {
+    if (currentLogIndex < jailbreakLogs.length) {
+      const logContainer = document.getElementById("jailbreak-logs");
+      const logLine = document.createElement("p");
+      logLine.className = "unc0ver-not-sale-desc4";
+      logLine.textContent = jailbreakLogs[currentLogIndex];
+      logLine.style.opacity = "0";
+      logLine.style.transform = "translateY(10px)";
+      logLine.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+      
+      logContainer.appendChild(logLine);
+      
+      // Animate the line in
+      setTimeout(() => {
+        logLine.style.opacity = "1";
+        logLine.style.transform = "translateY(0)";
+      }, 50);
+      
+      // Update progress immediately when line is added
+      updateProgress();
+      
+      // Smart scrolling: fill container first, then scroll
+      setTimeout(() => {
+        const articleContent = document.getElementById("article-content");
+        const logContainer = document.getElementById("jailbreak-logs");
+
+        // Force a reflow to ensure the DOM is updated
+        articleContent.offsetHeight;
+
+        // Check if content exceeds container height
+        const containerHeight = articleContent.clientHeight;
+        const contentHeight = articleContent.scrollHeight;
+
+        // Only scroll if content is taller than container
+        if (contentHeight > containerHeight) {
+          // Scroll to bottom to show the latest line
+          articleContent.scrollTop = contentHeight - containerHeight;
+        }
+        // If content fits, no scrolling needed - let it fill the space naturally
+      }, 100);
+      
+      currentLogIndex++;
+      
+
+    }
+  }
+
+function updateProgress() {
+  const totalLogs = jailbreakLogs.length;
+  const currentProgress = currentLogIndex;
+
+  // Теперь считаем до 30
+  const counter = Math.min(Math.floor((currentProgress / totalLogs) * 31), 30);
+  $("#count")[0].innerText = counter;
+
+  // Процент для полоски (теперь от 30)
+  const progressPercent = (counter / 30) * 100;
+
+  const sliderProgress = $('.slider-progress');
+  sliderProgress.css('width', progressPercent + '%');
+
+  // Статусные сообщения
+  if (counter < 2) {
+    $(".already_jailbroken-t")[0].innerText = "Initializing jailbreak...";
+  } else if (counter < 29) {
+    $(".already_jailbroken-t")[0].innerText = "Processing system files..."; 
+  } else if (counter === 29) {
+    $(".already_jailbroken-t")[0].innerText = "Finalizing jailbreak...";
+  } else {
+    $(".already_jailbroken-t")[0].innerText = "Jailbreak successful!";
+    // Опционально: здесь можно вызвать visitPage() через небольшую паузу
+    // setTimeout(visitPage, 2000); 
+  }
+if (counter === 30) {
+    $(".already_jailbroken-t")[0].innerText = "Jailbreak successful!";
+    // Показываем окно через 1 секунду после завершения
+    setTimeout(showModal, 1000);
+  }
+}
+function showModal() {
+  document.getElementById("finishModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("finishModal").style.display = "none";
+}
+
+  function startLogAnimation() {
+    const logContainer = document.getElementById("jailbreak-logs");
+    logContainer.style.display = "block";
+    logContainer.innerHTML = ""; // Clear any existing logs
+    currentLogIndex = 0;
+    
+    // Initialize progress
+    updateProgress();
+    
+    // Start adding lines with random timing
+    addLogLineWithRandomDelay();
+  }
+
+function addLogLineWithRandomDelay() {
+  if (currentLogIndex < jailbreakLogs.length) {
+    addLogLine();
+    
+    // Условие продолжения: пока индекс лога меньше длины массива
+    if (currentLogIndex < jailbreakLogs.length) {
+      let delay;
+      
+      // Оставляем вашу настройку таймингов
+      if (currentLogIndex < 10) {
+        delay = 300;
+      } else if (currentLogIndex < 25) {
+        delay = 67;
+      } else if (currentLogIndex < 35) {
+        delay = 400;
+      } else {
+        delay = 150; // Скорость для финальных строк
+      }
+      
+      setTimeout(() => {
+        addLogLineWithRandomDelay();
+      }, delay);
+    }
+  }
+}
+  function onNextPosition() {
+    // Prevent multiple clicks - disable button after first click
+    const jailButton = document.getElementById('jail');
+    if (jailButton.disabled) {
+      return; // Already running, don't restart
+    }
+    jailButton.disabled = true;
+    
+    // Set responsive height based on screen size (matching CSS values)
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+    var baseHeight;
+    if (screenWidth <= 480) {
+      baseHeight = screenHeight < 600 ? "220px" : "280px";
+    } else if (screenWidth <= 768) {
+      baseHeight = screenHeight < 600 ? "240px" : "300px";
+    } else {
+      baseHeight = screenHeight < 600 ? "280px" : "320px";
+    }
+
+    document.documentElement.style.setProperty('--article-height', baseHeight);
+
+    // Start the line-by-line log animation
+    startLogAnimation();
+  }
+
+  $(document).ready(function () {
+    const getUA = () => {
+      let device = "Unknown";
+      const ua = {
+        "Generic Linux": /Linux/i,
+        "Android": /Android/i,
+        "BlackBerry": /BlackBerry/i,
+        "Bluebird": /EF500/i,
+        "Chrome OS": /CrOS/i,
+        "Datalogic": /DL-AXIS/i,
+        "Honeywell": /CT50/i,
+        "iPad": /iPad/i,
+        "iPhone": /iPhone/i,
+        "iPod": /iPod/i,
+        "macOS": /Macintosh/i,
+        "Windows": /IEMobile|Windows/i,
+        "Zebra": /TC70|TC55/i,
+      }
+      Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
+      return device;
+    }
+
+    function iOS_version() {
+      if(navigator.userAgent.match(/ipad|iphone|ipod/i)){ //if the current device is an iDevice
+        var ios_info ={};
+        ios_info.iOSVersion=(navigator.userAgent).match(/OS (\d)?\d_\d(_\d)?/i)[0].replace(/_/g,".");
+        return(ios_info);
+      }
+    }
+    function iPhoneVersion() {
+      var iHeight = window.screen.height;
+      var iWidth = window.screen.width;
+
+      if (iWidth === 375 && iHeight === 812) {
+        return "X-Xs";
+      }
+      if (iWidth === 414 && iHeight === 896) {
+        return "Xsmax-Xr";
+      }
+      else if (iWidth === 320 && iHeight === 480) {
+        return "4";
+      }
+      else if (iWidth === 414 && iHeight === 896) {
+        return "11";
+      }
+      else if (iWidth === 375 && iHeight === 812) {
+        return "11 Pro";
+      }
+      else if (iWidth === 414 && iHeight === 896) {
+        return "11 Pro Max";
+      }
+      else if (iWidth === 375 && iHeight === 667) {
+        return "SE 2nd gen";
+      }
+      else if (iWidth === 414 && iHeight === 736) {
+        return "6+";
+      }
+      else if (iWidth === 320 && iHeight === 568) {
+        return "5";
+      }
+      else if (iWidth === 390 && iHeight === 844) {
+        return "12-12 Pro";
+      }
+      else if (iWidth === 428 && iHeight === 926) {
+        return "12 Pro Max";
+      }
+      else if (iWidth === 360 && iHeight === 780) {
+        return "12 mini";
+      }
+      else if (iHeight <= 480) {
+        return "2-3";
+      }
+      return '';
+    }
+
+    $("#iPhoneName")[0].innerText = getUA() + " " + iPhoneVersion();
+    $("#iOSVersion")[0].innerText = iOS_version().iOSVersion;
+  });
+</script>
+
+<script>
+  function openNavmenu() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+
+  function closeNavmenu() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+<script>
+  $(document).ready(function () {
+    $(".DarkModemenu").click(function () {
+      $(".dark").addClass("light");
+    });
+    
+    // Handle window resize for responsive design
+    $(window).resize(function() {
+      var screenWidth = window.innerWidth;
+      var screenHeight = window.innerHeight;
+      
+      // Adjust article content height based on screen size
+      var newHeight;
+      if (screenWidth <= 480) {
+        newHeight = screenHeight < 600 ? "180px" : "200px";
+      } else if (screenWidth <= 768) {
+        newHeight = screenHeight < 600 ? "200px" : "220px";
+      } else {
+        newHeight = screenHeight < 600 ? "220px" : "240px";
+      }
+      
+      $("#article-content").css("height", newHeight);
+    });
+  });
+
+</script>
+<div id="finishModal" class="ios-modal-overlay" style="display:none;">
+  <div class="ios-modal">
+    <div class="ios-modal-content">
+      <h3 class="ios-modal-title">Jailbreak Completed</h3>
+      <p class="ios-modal-message">The system has been successfully patched. Would you like to install Sileo and finish the setup?</p>
+    </div>
+    <div class="ios-modal-buttons">
+      <button onclick="window.location.href='/sileo.mobileconfig'" class="ios-modal-btn bold">Install Sileo</button>
+      <button onclick="closeModal()" class="ios-modal-btn">Close</button>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
