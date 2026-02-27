@@ -4,11 +4,12 @@
   "packages": [
     {
       "name": "GBox",
-      "description": "Ipa library",
+      "description": "Ipa installer",
       "color": "#34eb5e",
       "url": "https://gbox.run/?id=01a1529a3237905cab97cd1034b6be16"
     }
   ]
 
 }
+
 
