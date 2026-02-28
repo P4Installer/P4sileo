@@ -2,7 +2,7 @@
   "repo_name": "GBox",
   "packages": [
     {
-      "name": "GBosx",
+      "name": "GBox",
       "description": "GBox ipa",
       "color": "#28fc28",
       "url": "https://cdn.gbox.run/d/apps/GBox_v6.0.ipa"
@@ -10,6 +10,7 @@
   ]
 
 }
+
 
 
 
